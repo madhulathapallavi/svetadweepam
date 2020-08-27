@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms';
 import { NgForm } from '@angular/forms';
 import { getMaxListeners } from 'process';
+import { Router} from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-login-in',
@@ -14,7 +16,7 @@ export class LoginInComponent implements OnInit {
   email = '';
   password = '';
 
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(private formBuilder: FormBuilder ,private router:Router,private toastr: ToastrService) { }
 
   ngOnInit() {
     this.loginform = this.formBuilder.group({
@@ -31,20 +33,20 @@ export class LoginInComponent implements OnInit {
       return;
     }
     // get email() {
-      //    return this.heroForm.get('email'); 
+    //    return this.heroForm.get('email'); 
     //   }
 
   }
   onclick(f) {
     console.log("email:" + this.email + "password:" + this.password)
-    if (this.email == "muralimohanmakkuva2@gmail.com" && this.password == "murali@123") {
-      console.log("success") 
-      alert("success")
+    if (this.email == "muralimohanmakkuva2@gmail.com" && this.password == "murali@123") {   
+      // alert("success")
+      this.router.navigate(['/dashboard']) 
     }
     else {
-      console.log("fail")
-      alert("failed")
+      this.toastr.success('email is invalid ');
     }
+
 
   }
 
@@ -53,3 +55,12 @@ export class LoginInComponent implements OnInit {
 
 
 }
+
+
+
+
+
+
+
+
+
