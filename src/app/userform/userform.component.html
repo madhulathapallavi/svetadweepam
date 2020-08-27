@@ -4,46 +4,69 @@
         <img src="../../assets/images/profile.png" class="profile-photo">
     </div>
     <div class="row text-center profile-form">
-        <form>
+        <form [formGroup]="newuserform" (ngSubmit)="onSubmit()">
             <div class="form-group col-sm-12">
                 <label for="inputEmail3" class="col-sm-5 col-form-label">First Name</label>
                 <div class="col-sm-7">
-                    <input type="email" class="form-control" id="inputEmail3" placeholder="First Name">
+                    <input type="text" class="form-control" id="firstname" placeholder="First Name" name="firstname" formControlName="firstname"  [ngClass]="{ 'is-invalid':formData.firstname.invalid && formData.firstname.touched && formData.firstname.errors }">
+                    <div *ngIf=" formData.firstname.errors" class="invalid-feedback" >
+                        <div *ngIf="formData.firstname.invalid && formData.firstname.errors.required">First Name is required</div>
+                    </div>
                 </div>
             </div>
             <div class="form-group col-sm-12">
                 <label for="inputEmail3" class="col-sm-5 col-form-label">Last Name</label>
                 <div class="col-sm-7">
-                    <input type="email" class="form-control" id="inputEmail3" placeholder="First Name">
+                    <input type="text" class="form-control" id="lastname" placeholder="Last Name" name="lastname" formControlName="lastname"  [ngClass]="{ 'is-invalid':formData.lastname.invalid && formData.lastname.touched && formData.lastname.errors }">
+                    <div *ngIf=" formData.lastname.errors" class="invalid-feedback" >
+                        <div *ngIf="formData.lastname.invalid && formData.lastname.errors.required">Last Name is required</div>
+                    </div>
                 </div>
             </div>
             <div class="form-group col-sm-12">
                 <label for="inputEmail3" class="col-sm-5 col-form-label">Email</label>
                 <div class="col-sm-7">
-                    <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+                    <input type="email" class="form-control" id="email" placeholder="Email" name="email" formControlName="email"  [ngClass]="{ 'is-invalid':formData.email.invalid && formData.email.touched && formData.email.errors }">
+                    <div *ngIf="formData.email.invalid && formData.email.touched && formData.email.errors" class="invalid-feedback">
+                        <div *ngIf="formData.email.errors.required">Email is required</div>
+                        <div *ngIf="formData.email.errors.email">Email must be a valid email address</div>
+                    </div>
                 </div>
             </div>
             <div class="form-group col-sm-12">
                 <label for="inputPassword3" class="col-sm-5 col-form-label">Phone No</label>
                 <div class="col-sm-7">
-                    <input type="password" class="form-control" id="inputPassword3" placeholder="Phone No">
+                    <input type="text" class="form-control" id="phonenumber" placeholder="Phone No" name="phonenumber" formControlName="phonenumber" [ngClass]="{'is-invalid' : formData.phonenumber.invalid && formData.phonenumber.touched && formData.phonenumber.errors }">
+                        <div *ngIf="formData.phonenumber.invalid && formData.phonenumber.touched && formData.phonenumber.errors" class="invalid-feedback">
+                            <div *ngIf="formData.phonenumber.invalid && formData.phonenumber.touched &&formData.phonenumber.errors.required">Phone Number is Required</div>     
+                        </div>
                 </div>
             </div>
             <div class="form-group col-sm-12">
                 <label for="inputPassword3" class="col-sm-5 col-form-label">Create Password</label>
                 <div class="col-sm-7">
-                    <input type="password" class="form-control" id="inputPassword3" placeholder="Create Password">
-                </div>
+                    <input type="password" class="form-control" id="createpassword" placeholder="Create Password" name="createpassword" formControlName="createpassword">
+                    <!-- <div *ngIf="formData.createpassword.invalid && formData.createpassword.touched && formData.createpassword.errors" class="invalid-feedback">
+                        <div *ngIf="formData.createpassword.invalid && formData.createpassword.touched &&formData.createpassword.errors.required">Phone Number is Required</div>     
+                    </div>
+                </div> -->
+            </div>
             </div>
             <div class="form-group col-sm-12">
                 <label for="inputPassword3" class="col-sm-5 col-form-label">Confirm Create Password</label>
                 <div class="col-sm-7">
-                    <input type="password" class="form-control" id="inputPassword3" placeholder="Confirm Password">
+                    <input type="password" class="form-control" id="confirmpassword" placeholder="Confirm Password" name="confirmpassword" formControlName="confirmpassword" >
+                    <!-- <div *ngIf="formData.confirmpassword.invalid && formData.confirmpassword.touched && formData.confirmpassword.errors" class="invalid-feedback">
+                        <div *ngIf="formData.confirmpassword.invalid && formData.confirmpassword.touched &&formData.confirmpassword.errors.required">Phone Number is Required</div>     
+                    </div> -->
                 </div>
             </div>
             <div class="marginauto col-sm-12 marginbtm-form">
-                <button type="Submit" class="btn btn-success btn-lg btn-borders">SUBMIT</button>
+                <button type="Submit"  class="btn btn-success btn-lg btn-borders" [disabled]="newuserform.invalid">SUBMIT</button>
             </div>
         </form>
+    </div>
+    <div class="row">
+    {{newuserform.value | json}}
     </div>
 </div>

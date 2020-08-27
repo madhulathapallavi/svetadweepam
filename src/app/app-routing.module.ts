@@ -11,11 +11,12 @@ import { UsersdetailsComponent } from './usersdetails/usersdetails.component';
 
 const routes: Routes = [
   {path:'',component:LoginInComponent},
+  {path:'login',component:LoginInComponent},
   {path:'dashboard',component:DashboardComponent},
-  {path:'signup',component:SignUpComponent},
+  // {path:'signup',component:SignUpComponent},
   {path:'profile',component:ProfileComponent},
   {path:'userform',component:UserformComponent},
-  {path:'subscribe',component:SubscribeComponent},
+  {path:'subscription',component:SubscribeComponent},
   {path:'Usersdetails',component:UsersdetailsComponent}
   
   
