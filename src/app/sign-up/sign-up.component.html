@@ -1,0 +1,82 @@
+<app-navbar></app-navbar>
+<div class="container-scroller">
+    <div class="head">
+        
+    </div>
+     <div class="container-fluid">
+       <div class="content-wrapper d-flex  auth px-0">
+       
+             
+          <div class="col-lg-4 mx-auto">  
+            <div class=" banner auth-form-light  py-5 px-4 px-sm-5">
+              <div class="logo"> 
+                  <img src="../assets/images/logo.svg" alt="logo"> 
+                </div><br>
+                <div class="heading">
+              <h2>వాసుదేవ!</h2>
+              <h4 class="" >శ్వేతద్వీపం మాసపత్రిక చదువుటకు క్రింది Form లో మీ Username మరియు Password ఇచ్చి Login అవ్వండి.</h4>
+              </div>
+            
+                <form #f="ngForm" (ngSubmit)="onsignup(f)">
+                <div class=" signup  form-group">
+                    
+                  <input type="text" class="form-control form-control-lg" id="email" placeholder="Enter Email" name="email" [pattern]="emailpattern" required
+                  [(ngModel)]="mail.email"  #email="ngModel" >
+                  <div *ngIf="email.invalid && (email.dirty || email.touched)"class="alert alert-danger">
+                    <div *ngIf="email.errors.required">
+                        email is required.
+                     </div>
+                    <div *ngIf="email.errors.pattern">
+                        plase enter email (xyz@gmail.com).
+                    </div>
+                 </div>
+ 
+                </div>
+                <div class="signup form-group">
+                    <input type="password" class="form-control form-control-lg" id="psw" placeholder="Enter Password" name="psw" required minlength="6"
+                    [(ngModel)]="mail.psw" #psw="ngModel"  >
+                    <div *ngIf="psw.invalid && (psw.dirty ||psw.touched)"class="alert alert-danger">
+                      <div *ngIf="psw.errors.required">
+                        Password is required
+                      </div>
+                      <div *ngIf="psw.errors.minlength">
+                        Password must be at least 6 characters
+                      </div>
+                    </div>
+ 
+                </div>
+                <div class="signup form-group">
+                <input type="text" class="form-control form-control-lg" placeholder="conform Password" name="psw-repeat" required [(ngModel)]="mail.cpass"
+                #cpass="ngModel">
+                <div *ngIf="cpass.invalid && (cpass.dirty || cpass.touched)" class="alert alert-danger">
+                  <div *ngIf="cpass.errors.required">
+                    conform password is required
+                  </div>
+                  <div *ngIf="cpass.errors.mustMatch">
+                    Passwords must match
+
+                  </div>
+                </div>
+                </div>
+                <div class="check">
+               <label> <input type="checkbox" checked="checked" name="remember" > Remember me </label>
+                </div>
+                <div class=" signup form-group">
+                    <button type="password" class="btn btn-block btn-danger btn-lg" [disabled]="f.invalid">Signup</button>
+                  </div>
+
+                  
+              </form>
+            </div>
+          </div>
+       
+       </div> 
+</div>
+</div>
+
+
+
+
+
+
+

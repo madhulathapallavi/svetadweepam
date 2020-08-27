@@ -1,0 +1,27 @@
+/*new styles*/
+.navbar-menuslist li{
+    display: inline;
+    padding:10px 15px;
+    font-size:18px;
+  }
+  .icons-size,.logout-size{
+      color:#323592;
+      text-decoration:none!important;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.50px;
+  }
+  .navbar-menuslist li .icons-size:hover{
+    background:#000;
+    color:#fff;
+    padding:10px 15px;
+  }
+  .header-height{
+      height:66px;
+  }
+  .headerbg{
+    background: #fff;
+  }
+  .welcomemsg{
+    color:#323592
+  }

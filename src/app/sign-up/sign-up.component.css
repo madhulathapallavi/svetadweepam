@@ -1,0 +1,32 @@
+/* // .content-wrapper{
+    //     text-align: center;
+    // } */
+    .head{
+        padding-top: 50px;
+    }
+    
+    
+    
+    .banner{
+        background-color:whitesmoke;
+        padding-top:10px !important;
+    }
+    .heading{
+        text-align:center;
+    }
+    .heading h2{
+       line-height:20px;
+    }
+    .heading h4{ 
+    line-height:27px;
+    }
+    .signup{
+    font-size:10px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    .newuser{
+        text-align: center;
+    }
+    .check{
+        margin-bottom: 15px;
+    }

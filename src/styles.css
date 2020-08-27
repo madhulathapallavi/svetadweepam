@@ -1,0 +1,40 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+    font-family: 'Open Sans', sans-serif;
+    background: #f2f2fb!important;
+}
+.profile-photo{
+    width:85px;
+    height:85px;
+    margin-top:3%;
+    border:5px solid #323592;
+    border-radius: 50px;
+}
+.profile-pagebg{
+    background: #fff;
+    box-shadow: 0px 0px 6px #d2d2d2!important;
+    width:30%;
+    border-radius: 20px;
+    margin-left:35%;
+    margin-top:2%;
+}
+.profile-form{
+    padding:20px 0px;
+}
+.marginbtm-form{
+    padding-bottom: 20px;
+}
+.mgtop20{
+    margin-top: 20px;
+}
+.btn-borders{
+    border-radius: 20px;
+    /* height:40px; */
+    /* width:30%; */
+}
+.mgtop30{
+   margin-top:30px
+}
+.headingsfont label,.profile-form div label{
+    font-size:16px;
+}
