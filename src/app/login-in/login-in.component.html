@@ -14,7 +14,7 @@
           <form [formGroup]="loginform" (ngSubmit)="onSubmit()">
             <div class=" login form-group">
           <label>Email</label>
-          <input type="text" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }"  [(ngModel)]="email"/>
+          <input type="text" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }"  [(ngModel)]="email" placeholder="abc@gmail.com"/>
           <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
               <div *ngIf="f.email.errors.required">Email is required</div>
               <div *ngIf="f.email.errors.email">Email must be a valid email address</div>
@@ -29,7 +29,7 @@
           </div>
         </div>
                <div class=" login form-group">
-                  <button type="Submit" class="btn btn-block btn-primary btn-lg"  [disabled]="f.invalid" (click)="onclick(f)">Login</button>
+                  <button type="Submit" class="btn btn-block btn-primary btn-lg"  [disabled]="loginform.invalid" (click)="onclick(f)">Login</button>
                 </div>
          </form>
           <!-- <div class="newuser">

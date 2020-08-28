@@ -38,13 +38,13 @@ export class LoginInComponent implements OnInit {
 
   }
   onclick(f) {
-    console.log("email:" + this.email + "password:" + this.password)
-    if (this.email == "muralimohanmakkuva2@gmail.com" && this.password == "murali@123") {   
+    console.log(f.value)
+    if (( this.email == "narayana@inlightdata.com" || this.email == "muralimohanmakkuva2@gmail.com" || this.email == "adarisrividya03@gmail.com" || this.email == "madhulathapallavi@gmail.com" || this.email == "sindhudurvasulak@gmail.com" || this.email == "madhavaphani16@gmail.com" || this.email =="prabhunath453@gmail.com") && (this.password == "123456")) {   
       // alert("success")
       this.router.navigate(['/dashboard']) 
     }
     else {
-      this.toastr.success('email is invalid ');
+      this.toastr.error('Invalid Login Credentials');
     }
 
 
@@ -55,8 +55,6 @@ export class LoginInComponent implements OnInit {
 
 
 }
-
-
 
 
 
