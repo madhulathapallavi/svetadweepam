@@ -40,7 +40,7 @@ export class UsersdetailsComponent implements OnInit {
   
      this.users = this.usersList.filter(res => 
        res. Name.toLocaleLowerCase().indexOf(this.firstname.toLocaleLowerCase()) > -1 || 
-       res. subscriptionId.toLocaleLowerCase().indexOf(this.firstname.toLocaleLowerCase()) > -1 || 
+       res. subscriptionId.toString().toLocaleLowerCase().indexOf(this.firstname.toLocaleLowerCase()) > -1 || 
        res. subscriptionStartDate.toLocaleLowerCase().indexOf(this.firstname.toLocaleLowerCase()) > -1 ||
        res.subscriptionEndDate.toLocaleLowerCase().indexOf(this.firstname.toLocaleLowerCase()) > -1 || 
        res.phoneNo.toString().toLocaleLowerCase().indexOf(this.firstname.toLocaleLowerCase()) > -1

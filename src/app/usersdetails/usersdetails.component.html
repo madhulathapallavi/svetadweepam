@@ -4,7 +4,7 @@
    <h3>search:</h3><input type="text" placeholder="enter values"  (input)="search()" [(ngModel)]=" firstname">
    <br><br>
        
-       <table border="1" align="center" >
+       <table class="main" border="1" align="center" >
            <tr>
            <th>Name</th>
            <th>subscriptionId</th>
@@ -12,6 +12,7 @@
            <th>subscriptionEndDate</th>
            <th>phoneNo</th>
            </tr>
+           <br>
 
            <tr *ngFor="let user of users ">
                <td>{{user.Name}}</td>
