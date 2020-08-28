@@ -11,11 +11,11 @@ export class UsersdetailsComponent implements OnInit {
   users=[];
   usersList=[
       
-    { Name:'murali', subscriptionId:'1', subscriptionStartDate:'22-9-0', subscriptionEndDate:'9-10-20',phoneNo:54545456454 },
-    { Name:'murali', subscriptionId:'1', subscriptionStartDate:'22-9-0', subscriptionEndDate:'10-10-0',phoneNo:54545456454 },
-    { Name:'murali', subscriptionId:'1', subscriptionStartDate:'22-9-0', subscriptionEndDate:'10-10-0',phoneNo:54545456454 },
-    { Name:'murali', subscriptionId:'1', subscriptionStartDate:'22-9-0', subscriptionEndDate:'12-10-0',phoneNo:54545456454 },
-    { Name:'sita', subscriptionId:'1', subscriptionStartDate:'4-1-2019', subscriptionEndDate:'13-10-0',phoneNo:54545456454 },
+    { Name:'murali', subscriptionId:'1', subscriptionStartDate:'2-3-20', subscriptionEndDate:'9-10-20',phoneNo:7993509743 },
+    { Name:'mohan', subscriptionId:'2', subscriptionStartDate:'3-3-20', subscriptionEndDate:'10-10-0',phoneNo:8309409777 },
+    { Name:'pallavi', subscriptionId:'3', subscriptionStartDate:'4-3-20', subscriptionEndDate:'10-10-0',phoneNo:54959595 },
+    { Name:'bhavana', subscriptionId:'4', subscriptionStartDate:'5-3-20', subscriptionEndDate:'12-10-0',phoneNo:798745556 },
+    { Name:'sita', subscriptionId:'5', subscriptionStartDate:'5-3-20', subscriptionEndDate:'13-10-0',phoneNo:9848080183 },
     
   ]
 
@@ -36,11 +36,16 @@ export class UsersdetailsComponent implements OnInit {
 
   }
   search(){
-    debugger
+    
   
      this.users = this.usersList.filter(res => 
-       res.subscriptionEndDate.toLocaleLowerCase().indexOf(this.firstname.toLocaleLowerCase()) > -1 
+       res. Name.toLocaleLowerCase().indexOf(this.firstname.toLocaleLowerCase()) > -1 || 
+       res. subscriptionId.toLocaleLowerCase().indexOf(this.firstname.toLocaleLowerCase()) > -1 || 
+       res. subscriptionStartDate.toLocaleLowerCase().indexOf(this.firstname.toLocaleLowerCase()) > -1 ||
+       res.subscriptionEndDate.toLocaleLowerCase().indexOf(this.firstname.toLocaleLowerCase()) > -1 || 
+       res.phoneNo.toString().toLocaleLowerCase().indexOf(this.firstname.toLocaleLowerCase()) > -1
      )
+     
     }
   }
 
