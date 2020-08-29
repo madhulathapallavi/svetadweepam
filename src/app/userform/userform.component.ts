@@ -2,7 +2,8 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
 import { NgForm } from '@angular/forms';
-import { Router } from '@angular/router'
+import { Router } from '@angular/router';
+import { ConfirmedValidator } from './confirmed.validator';
 
 @Component({
   selector: 'app-userform',
@@ -17,7 +18,7 @@ export class UserformComponent implements OnInit {
   lastname:string;
   email:any;
   phonenumber:number;
-  createpassword:any;
+  password:any;
   confirmpassword:any;
 
   constructor(private router:Router,private formBuilder: FormBuilder,private toastr: ToastrService) { 
@@ -28,7 +29,7 @@ export class UserformComponent implements OnInit {
       this.lastname='';
       this.email='';
       this.phonenumber;
-      this.createpassword='';
+      this.password='';
       this.confirmpassword='';
     }
 
@@ -38,8 +39,12 @@ export class UserformComponent implements OnInit {
       lastname:['',Validators.required],
       email: ['', [Validators.required, Validators.email]],
       phonenumber:['',[Validators.required, Validators.maxLength(10)]],
-      createpassword: ['', [Validators.required, Validators.minLength(6)]],
-      confirmpassword:['',[Validators.required,  Validators.minLength(6)]]
+      // createpassword: ['', [Validators.required, Validators.minLength(6)]],
+      // confirmpassword:['',[Validators.required,  Validators.minLength(6)]]
+      password: ['', [Validators.required]],
+      confirmpassword: ['', [Validators.required]]
+    }, { 
+      validator: ConfirmedValidator('password', 'confirmpassword')
     });
   }
   
