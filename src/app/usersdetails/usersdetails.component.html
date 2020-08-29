@@ -1,16 +1,19 @@
 <app-navbar></app-navbar>
 
-  <div class="body">
-   <h3>search:</h3><input type="text" placeholder="enter values"  (input)="search()" [(ngModel)]=" firstname">
-   <br><br>
+<div class="container-fluid">
+  <div class="row searchpanel" text-align="center">
+      <div class=" col-sm-4 searchheading"><h3>Search:</h3></div>
+      <div class="col-sm-8 searchfield"> <input type="text" placeholder="Enter Values"   (input)="search()" [(ngModel)]=" firstname"><i class="fa fa-search"></i></div>
+  
+  </div>      
        
-       <table class="main" border="1" align="center" >
+       <table class="main" >
            <tr>
            <th>Name</th>
-           <th>subscriptionId</th>
-           <th>subscriptionStartDate</th>
-           <th>subscriptionEndDate</th>
-           <th>phoneNo</th>
+           <th>Subscription Id</th>
+           <th>Subscription Start Date</th>
+           <th>Subscription End Date</th>
+           <th>Phone No</th>
            </tr>
           
 
@@ -27,7 +30,8 @@
 
 
        </table>
-  </div>
+</div>
+  
 
        
   
