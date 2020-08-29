@@ -4,7 +4,7 @@ import { NgForm } from '@angular/forms';
 import { getMaxListeners } from 'process';
 import { Router} from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
-
+import {DataService} from '../dataservice';
 @Component({
   selector: 'app-login-in',
   templateUrl: './login-in.component.html',
@@ -15,8 +15,9 @@ export class LoginInComponent implements OnInit {
   submitted = false;
   email = '';
   password = '';
+  
 
-  constructor(private formBuilder: FormBuilder ,private router:Router,private toastr: ToastrService) { }
+  constructor(private formBuilder: FormBuilder ,public dataService: DataService,private router:Router,private toastr: ToastrService) { }
 
   ngOnInit() {
     this.loginform = this.formBuilder.group({
@@ -39,17 +40,31 @@ export class LoginInComponent implements OnInit {
   }
   onclick(f) {
     console.log(f.value)
-    if (( this.email == "narayana@inlightdata.com" || this.email == "muralimohanmakkuva2@gmail.com" || this.email == "adarisrividya03@gmail.com" || this.email == "madhulathapallavi@gmail.com" || this.email == "sindhudurvasulak@gmail.com" || this.email == "madhavaphani16@gmail.com" || this.email =="prabhunath453@gmail.com") && (this.password == "123456")) {   
-      // alert("success")
-      this.router.navigate(['/dashboard']) 
-    }
-    else {
-      this.toastr.error('Invalid Login Credentials');
-    }
+    if ( this.email == "narayana@inlightdata.com" && this.password == "123456") {   
+            // alert("success")
+            this.router.navigate(['/dashboard']);
+            this.dataService.isAdmin ='true';
+           this.dataService.name= 'true';
+       }
+          else {
+          // alert("success")
+            this.router.navigate(['/dashboard']) ;
+            
+            
+          }
+    // else {
+    //   this.toastr.error('Invalid Login Credentials');
+    // }
 
 
   }
 
+// adminname =[
+//               {'name':'NarayanaMurthy'},
+//             ]
+// username =[
+//               {'name':'NarayanaMurthy'},
+//             ]
 
 
 

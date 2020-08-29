@@ -11,8 +11,8 @@
         <ul class="navbar-menuslist">
           <li><a routerLink="/profile" routerLinkActive="active" class=icons-size>PROFILE</a></li>
           <li><a routerLink="/subscription" routerLinkActive="active" class=icons-size>SUBSCRIPTION DETAILS</a></li>
-          <li><a routerLink="/userform" routerLinkActive="active" class=icons-size>NEWUSER FORM</a></li>
-          <li><a routerLink="/Usersdetails" routerLinkActive="active" class=icons-size>USERS DETAILS</a></li>
+          <li *ngIf="dataService.isAdmin"><a routerLink="/userform" routerLinkActive="active" class=icons-size>NEWUSER FORM</a></li>
+          <li *ngIf="dataService.isAdmin"><a routerLink="/Usersdetails" routerLinkActive="active" class=icons-size>USERS DETAILS</a></li>
           <li><a routerLink="/login" routerLinkActive="active" class="logout-size"><i class="fa fa-sign-out"></i> LOGOUT</a></li>
         </ul>
       </div>

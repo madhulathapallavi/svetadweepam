@@ -15,6 +15,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { UserformComponent } from './userform/userform.component';
 import { SubscribeComponent } from './subscribe/subscribe.component';
 import { UsersdetailsComponent } from './usersdetails/usersdetails.component';
+import { DataService } from './dataservice';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,7 @@ import { UsersdetailsComponent } from './usersdetails/usersdetails.component';
     ReactiveFormsModule,BrowserAnimationsModule,
     ToastrModule.forRoot()
   ],
-  providers: [],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
