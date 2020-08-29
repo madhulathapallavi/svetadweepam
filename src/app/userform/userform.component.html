@@ -45,20 +45,20 @@
             <div class="form-group col-sm-12">
                 <label for="inputPassword3" class="col-sm-5 col-form-label">Create Password</label>
                 <div class="col-sm-7">
-                    <input type="password" class="form-control" id="createpassword" placeholder="Create Password" name="createpassword" formControlName="createpassword">
-                    <!-- <div *ngIf="formData.createpassword.invalid && formData.createpassword.touched && formData.createpassword.errors" class="invalid-feedback">
-                        <div *ngIf="formData.createpassword.invalid && formData.createpassword.touched &&formData.createpassword.errors.required">Phone Number is Required</div>     
+                    <input type="password" class="form-control" id="createpassword" placeholder="Create Password" name="createpassword" formControlName="createpassword" [ngClass]="{'is-invalid' : formData.createpassword.invalid && formData.createpassword.touched && formData.createpassword.errors }">
+                    <div *ngIf="formData.createpassword.invalid && formData.createpassword.touched && formData.createpassword.errors" class="invalid-feedback">
+                        <div *ngIf="formData.createpassword.invalid && formData.createpassword.touched &&formData.createpassword.errors.required">Password is Required</div>     
                     </div>
-                </div> -->
+                </div>
             </div>
-            </div>
+           
             <div class="form-group col-sm-12">
                 <label for="inputPassword3" class="col-sm-5 col-form-label">Confirm Create Password</label>
                 <div class="col-sm-7">
-                    <input type="password" class="form-control" id="confirmpassword" placeholder="Confirm Password" name="confirmpassword" formControlName="confirmpassword" >
-                    <!-- <div *ngIf="formData.confirmpassword.invalid && formData.confirmpassword.touched && formData.confirmpassword.errors" class="invalid-feedback">
-                        <div *ngIf="formData.confirmpassword.invalid && formData.confirmpassword.touched &&formData.confirmpassword.errors.required">Phone Number is Required</div>     
-                    </div> -->
+                    <input type="password" class="form-control" id="confirmpassword" placeholder="Confirm Password" name="confirmpassword" formControlName="confirmpassword" [ngClass]="{'is-invalid' : formData.confirmpassword.invalid && formData.confirmpassword.touched && formData.confirmpassword.errors }">
+                    <div *ngIf="formData.confirmpassword.invalid && formData.confirmpassword.touched && formData.confirmpassword.errors" class="invalid-feedback">
+                        <div *ngIf="formData.confirmpassword.invalid && formData.confirmpassword.touched &&formData.confirmpassword.errors.required">confirmpassword is Required</div>     
+                    </div>
                 </div>
             </div>
             <div class="marginauto col-sm-12 marginbtm-form">
