@@ -2,37 +2,49 @@
 <div class="col-sm-12 row">
   <nav class="sidebar col-sm-2">
    
-    <!-- <div class="dropdown" *ngFor="let years of yearlist">
+    <div class="dropdown" *ngFor="let years of yearlist">
       <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
        {{ years.year}}
       </button>
       <div class="dropdown-menu" *ngFor="let months of years.month">
-        <a class="dropdown-item" href="#">{{months.month}}</a>
-
+        <ul class="nav flex-column sub-menu">
+          <li class="nav-item"> <a class="nav-link" href="">జనవరి </a></li>
+          <li class="nav-item"> <a class="nav-link" href="">ఫిబ్రవరి </a></li>
+          <li class="nav-item"> <a class="nav-link" href="">మార్చ్ </a></li>
+          <li class="nav-item"> <a class="nav-link" href="">ఏప్రిల్ </a></li>
+          <li class="nav-item"> <a class="nav-link" href="">మే </a></li>
+          <li class="nav-item"> <a class="nav-link" href="">జూన్ </a></li>
+          <li class="nav-item"> <a class="nav-link" href="">జులై </a></li>
+          <li class="nav-item"> <a class="nav-link" href="">ఆగష్టు </a></li>
+          <li class="nav-item"> <a class="nav-link" href="">సెప్టెంబరు </a></li>
+          <li class="nav-item"> <a class="nav-link" href="">అక్టోబరు </a></li>
+          <li class="nav-item"> <a class="nav-link" href="">నవంబరు </a></li>
+          <li class="nav-item"> <a class="nav-link" href="">డిసెంబరు </a></li>
+        </ul>
         
       </div>
-    </div> -->
+    </div>
     <!-- {{currentDate | date:'yyyy'}} -->
-    <div class="container" *ngFor="let years of yearlist">
+    <!-- <div class="container" *ngFor="let years of yearlist">
       <a href="#demo" class="btn btn-primary collapse-year" data-toggle="collapse"> {{ years.year}}</a>
       <div id="demo" class="collapse" *ngFor="let months of years.month">
         <ul class="nav flex-column sub-menu">
-          <li class="nav-item"> <a class="nav-link" href="#">జనవరి </a></li>
-          <li class="nav-item"> <a class="nav-link" href="#">ఫిబ్రవరి </a></li>
-          <li class="nav-item"> <a class="nav-link" href="#">మార్చ్ </a></li>
-          <li class="nav-item"> <a class="nav-link" href="#">ఏప్రిల్ </a></li>
-          <li class="nav-item"> <a class="nav-link" href="#">మే </a></li>
-          <li class="nav-item"> <a class="nav-link" href="#">జూన్ </a></li>
-          <li class="nav-item"> <a class="nav-link" href="#">జులై </a></li>
-          <li class="nav-item"> <a class="nav-link" href="#">ఆగష్టు </a></li>
-          <li class="nav-item"> <a class="nav-link" href="#">సెప్టెంబరు </a></li>
-          <li class="nav-item"> <a class="nav-link" href="#">అక్టోబరు </a></li>
-          <li class="nav-item"> <a class="nav-link" href="#">నవంబరు </a></li>
-          <li class="nav-item"> <a class="nav-link" href="#">డిసెంబరు </a></li>
+          <li class="nav-item"> <a class="nav-link" href="">జనవరి </a></li>
+          <li class="nav-item"> <a class="nav-link" href="">ఫిబ్రవరి </a></li>
+          <li class="nav-item"> <a class="nav-link" href="">మార్చ్ </a></li>
+          <li class="nav-item"> <a class="nav-link" href="">ఏప్రిల్ </a></li>
+          <li class="nav-item"> <a class="nav-link" href="">మే </a></li>
+          <li class="nav-item"> <a class="nav-link" href="">జూన్ </a></li>
+          <li class="nav-item"> <a class="nav-link" href="">జులై </a></li>
+          <li class="nav-item"> <a class="nav-link" href="">ఆగష్టు </a></li>
+          <li class="nav-item"> <a class="nav-link" href="">సెప్టెంబరు </a></li>
+          <li class="nav-item"> <a class="nav-link" href="">అక్టోబరు </a></li>
+          <li class="nav-item"> <a class="nav-link" href="">నవంబరు </a></li>
+          <li class="nav-item"> <a class="nav-link" href="">డిసెంబరు </a></li>
         </ul>
       
       </div>
-    </div>
+    </div> -->
     
    
   </nav>
