@@ -10,6 +10,7 @@ import { UsersdetailsComponent } from './usersdetails/usersdetails.component';
 
 
 const routes: Routes = [
+  // {path:'',redirectTo:'/app-root',pathMatch: 'full'},
   {path:'',component:LoginInComponent},
   {path:'login',component:LoginInComponent},
   {path:'dashboard',component:DashboardComponent},

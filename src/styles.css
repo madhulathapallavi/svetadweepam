@@ -38,3 +38,10 @@ body{
 .headingsfont label,.profile-form div label{
     font-size:16px;
 }
+label{
+    font-size:13px;
+    color: #323592;
+}
+input[type=text],input[type=email],input[type=password]{
+    font-size:13px;
+}

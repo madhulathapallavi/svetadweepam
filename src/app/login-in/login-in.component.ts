@@ -14,10 +14,13 @@ export class LoginInComponent implements OnInit {
   loginform: FormGroup;
   submitted = false;
   email = '';
-  password = '';
-  
+  password ='';
+ passwordShown: boolean =true;
 
   constructor(private formBuilder: FormBuilder ,public dataService: DataService,private router:Router,private toastr: ToastrService) { }
+  passwordShow() {
+    this.passwordShown = !this.passwordShown;
+  }
 
   ngOnInit() {
     this.loginform = this.formBuilder.group({

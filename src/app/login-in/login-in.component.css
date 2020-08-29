@@ -3,7 +3,7 @@
     // } */
     .banner{
         background-color:whitesmoke;
-        padding-top:50px !important;
+        
         border-radius: 5%;
     }
     .heading{
@@ -12,10 +12,12 @@
     }
     .heading h2{
        line-height:20px;
+       color: #323592;
     }
     .heading h4{ 
     line-height:27px;
     padding-bottom: 5%;
+    color: #323592;
     }
     .login{
     font-size:10px;
@@ -30,23 +32,24 @@
       /* new styles*/
       .marginauto{
         margin: 0px auto;
-        width: 50%;
+        width: 80%;
       }
       .inputfield-height{
-        height: 40px;
+        height: 35px;
         border-radius: 20px;
       }
     
      .msgbox{
-        background: #f1f1f1;
+        background: #fff;
         border-radius: 88px!important;
         padding: 15px 42px;
         margin-top:20px;
         box-shadow: 0px 0px 6px #d2d2d2!important;
         width:75%;
+        color: #323592;
      }
      .msgbox-text{
-         font-size:18px;
+         font-size:16px;
      }
      .bold-font{
          font-size:15px;
@@ -57,6 +60,24 @@
      /* background: rgba(255, 255, 255, 1); */
      border-radius: 25px;
     }
-    /* .btn-login{
-        background:#007bff
-    } */
+    .btn-login{
+        height: 40px;
+    border-radius: 20px;
+    width: 57%;
+    margin: 0px auto;
+    margin-top: 10px;
+    background: #323592;
+    color:#fff;
+    font-size:15px;
+    font-weight: bold;
+    letter-spacing: 0.50px;
+}
+.blue-text{
+    color: #323592;
+}
+.password-icon{
+position: absolute;
+top:50%;
+right:15%;
+font-size:16px;
+}
