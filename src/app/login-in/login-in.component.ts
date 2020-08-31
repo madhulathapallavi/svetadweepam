@@ -15,10 +15,12 @@ export class LoginInComponent implements OnInit {
   submitted = false;
   email = '';
   password = '';
-  
+  passwordShown: boolean =true;
 
   constructor(private formBuilder: FormBuilder ,public dataService: DataService,private router:Router,private toastr: ToastrService) { }
-
+  passwordShow() {
+    this.passwordShown = !this.passwordShown;
+  }
   ngOnInit() {
     this.loginform = this.formBuilder.group({
       email: ['', [Validators.required, Validators.email]],
