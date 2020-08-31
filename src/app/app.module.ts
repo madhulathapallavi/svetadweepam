@@ -16,6 +16,7 @@ import { UserformComponent } from './userform/userform.component';
 import { SubscribeComponent } from './subscribe/subscribe.component';
 import { UsersdetailsComponent } from './usersdetails/usersdetails.component';
 import { DataService } from './dataservice';
+import { ConfirmedValidator } from './userform/confirmed.validator'
 
 @NgModule({
   declarations: [
@@ -34,9 +35,12 @@ import { DataService } from './dataservice';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,BrowserAnimationsModule,
-    ToastrModule.forRoot()
+    ToastrModule.forRoot(),
+
   ],
-  providers: [DataService],
+  providers: [
+    DataService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

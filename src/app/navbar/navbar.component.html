@@ -4,13 +4,13 @@
       <div class="col-sm-2">
         <a href="dashboard"><img src="../../assets/images/logo_inner.svg"></a>
       </div>
-      <div class="col-md-3 text-right">
+      <div class="col-md-4 text-right">
         <h2 class="welcomemsg">Welcome Narayana Murthy</h2>
       </div>
-      <div class="col-md-7 text-right">
+      <div class="col-md-6 text-right">
         <ul class="navbar-menuslist">
           <li><a routerLink="/profile" routerLinkActive="active" class=icons-size>PROFILE</a></li>
-          <li><a routerLink="/subscription" routerLinkActive="active" class=icons-size>SUBSCRIPTION DETAILS</a></li>
+          <li *ngIf="!dataService.isAdmin"><a routerLink="/subscription" routerLinkActive="active" class=icons-size>SUBSCRIPTION DETAILS</a></li>
           <li *ngIf="dataService.isAdmin"><a routerLink="/userform" routerLinkActive="active" class=icons-size>NEWUSER FORM</a></li>
           <li *ngIf="dataService.isAdmin"><a routerLink="/Usersdetails" routerLinkActive="active" class=icons-size>USERS DETAILS</a></li>
           <li><a routerLink="/login" routerLinkActive="active" class="logout-size"><i class="fa fa-sign-out"></i> LOGOUT</a></li>

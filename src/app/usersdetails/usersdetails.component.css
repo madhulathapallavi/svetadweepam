@@ -1,6 +1,40 @@
-.body{
+/* .body{
     text-align: center;
+} */
+.searchpanel{
+    float:right;
+    margin:40px;
 }
+.searchheading{
+    font-size:16px;
+    color:#323592;
+}
+.searchfield{
+   
+    position:relative;
+}
+/* input{
+    width:80%;
+} */
+.searchfield i{
+    padding:4px;
+    position: absolute;
+    right:20%;
+}
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+  th,td{
+      padding:12px;
+  }
+  th{
+      font-size:20px;
+      color:#323592;
+  }
+  td{
+      font-size:16px;
+  }
  .main{
     /* min-width: 80px;
     border: 2px solid black;
@@ -8,7 +42,9 @@
     font-weight: lighter;
     margin: 8px 0;
     height: 104px; */
-    border: 10px solid black;
+    /* border: 10px solid black; */
     text-align: center;
-    width: 50%;
+    width: 80%;
+    height:100%;
+    margin:30px auto;
 } 
