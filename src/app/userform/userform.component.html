@@ -45,7 +45,7 @@
             <div class="form-group col-sm-12">
                 <label for="inputPassword3" class="col-sm-5 col-form-label">Create Password</label>
                 <div class="col-sm-7">
-                    <input type="password" class="form-control" id="password" placeholder="Create Password" name="password" formControlName="password">
+                    <input type="password" class="form-control" id="password" placeholder="Create Password" name="password" formControlName="password" [ngClass]="{'is-invalid' : formData.password.invalid && formData.password.touched && formData.password.errors }">
                     <div *ngIf="formData.password.invalid && formData.password.touched && formData.password.errors" class="invalid-feedback">
                         <div *ngIf=" formData.password.invalid && formData.password.touched && formData.password.errors.required">Password is Required</div>     
                     </div>
@@ -54,7 +54,7 @@
             <div class="form-group col-sm-12">
                 <label for="inputPassword3" class="col-sm-5 col-form-label">Confirm Create Password</label>
                 <div class="col-sm-7">
-                    <input type="password" class="form-control" id="confirmpassword" placeholder="Confirm Password" name="confirmpassword" formControlName="confirmpassword" >
+                    <input type="password" class="form-control" id="confirmpassword" placeholder="Confirm Password" name="confirmpassword" formControlName="confirmpassword" [ngClass]="{'is-invalid' : formData.confirmpassword.invalid && formData.confirmpassword.touched && formData.confirmpassword.errors }">
                     <div *ngIf="formData.confirmpassword.invalid && formData.confirmpassword.touched && formData.confirmpassword.errors" class="invalid-feedback">
                         <div *ngIf=" formData.confirmpassword.invalid && formData.confirmpassword.touched && formData.confirmpassword.errors.required">Password is required.</div>
                         <div *ngIf=" formData.confirmpassword.invalid && formData.confirmpassword.touched && formData.confirmpassword.errors.confirmedValidator">Password and Confirm Password must be match.</div>    
@@ -69,5 +69,5 @@
     <div class="row">
     {{newuserform.value | json}}
     </div>
-    
+
 </div>
