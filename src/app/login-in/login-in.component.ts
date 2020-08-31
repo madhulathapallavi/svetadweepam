@@ -52,9 +52,7 @@ export class LoginInComponent implements OnInit {
           else {
           // alert("success")
             this.router.navigate(['/dashboard']) ;
-            
-            
-          }
+           }
     // else {
     //   this.toastr.error('Invalid Login Credentials');
     // }
