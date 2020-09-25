@@ -42,11 +42,11 @@ export class LoginInComponent implements OnInit {
   }
   onclick(f) {
     console.log(f.value)
-    if ( this.email == "narayana@inlightdata.com" && this.password == "123456") {   
+    if ( this.email == "admin@gmail.com" && this.password == "123456") {   
             // alert("success")
             this.router.navigate(['/dashboard']);
             this.dataService.isAdmin ='true';
-           this.dataService.name= 'true';
+          
        }
           else {
           // alert("success")

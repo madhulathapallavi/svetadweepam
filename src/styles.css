@@ -46,3 +46,6 @@ label{
 input[type=text],input[type=email],input[type=password]{
     font-size:13px;
 }
+.invalid-feedback{
+    font-size: 13px!important;
+}
