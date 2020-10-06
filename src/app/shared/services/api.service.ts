@@ -6,4 +6,8 @@ export  const api ={
 
     apiserver: 'http://localhost:3000',
 
+    uploadFile: base+ 'userdetails/fileupload',
+    getyears: base+ 'userdetails/getyears',
+    getmonths: base+ 'userdetails/getmonths',
+
 }

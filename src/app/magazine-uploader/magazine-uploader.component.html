@@ -1,0 +1,57 @@
+<app-navbar></app-navbar>
+<div class="profile-pagebg">
+
+    <form #f="ngForm" action="">
+      <div class="row">
+            <div class="col-md-6 col-12 form-group">
+              <h4>Year </h4>
+            </div>
+            <div class="col-md-6 col-12">
+              <ng-select [items]="yearsList" bindLabel="year" bindValue="year_id" placeholder="Select Year"
+                name="year" [(ngModel)]="yearBind" (click)="removeMonth()">
+              </ng-select>
+             
+            </div>
+            
+          </div>
+
+          <div class="row">
+            <div class="col-md-6 col-12 form-group">
+              <h4>Month </h4>
+            </div>
+            <div class="col-md-6 col-12">
+              <ng-select [items]="monthsList" bindLabel="eng_month_name" bindValue="month_id" placeholder="Select Month"
+              name="month" [(ngModel)]="monthBind" >
+            </ng-select> 
+            
+            </div>
+            
+          </div>
+      
+
+          
+          <div class="row">
+            <div class="col-md-6 col-12 form-group">
+              <h4>Select file </h4>
+            </div>
+            <div class="col-md-6 col-12">
+        
+                <input #fileUpload type="file" (click)="fileUpload.value = null" (change)="importFile($event)" style="display:none" accept="image/*">
+           
+                <button (click)="fileUpload.click()" >
+                     Add File </button> 
+           
+            </div>
+            
+          </div>
+     
+   
+      
+        <div class="float-right">
+          <button type="button" class="btn btn-raised btn-primary" >Save
+          </button>
+        </div>
+      
+      </form>
+
+</div>

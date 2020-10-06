@@ -3,7 +3,9 @@ import { NgModule } from '@angular/core';
 import { FormsModule,ReactiveFormsModule} from '@angular/forms'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
-
+import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -19,7 +21,16 @@ import { DataService } from './dataservice';
 import { ConfirmedValidator } from './userform/confirmed.validator';
 
 import { AuthService } from './shared/auth/auth.service';
+import { HttpService} from './shared/services/http.service';
+import { MagazineUploaderComponent } from './magazine-uploader/magazine-uploader.component';
 
+
+import { NgSelectModule } from '@ng-select/ng-select';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
+export function createTranslateLoader(http: HttpClient) {
+  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+}
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,20 +41,33 @@ import { AuthService } from './shared/auth/auth.service';
     ProfileComponent,
     UserformComponent,
     SubscribeComponent,
-    UsersdetailsComponent
+    UsersdetailsComponent,
+    MagazineUploaderComponent,
+   
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,BrowserAnimationsModule,
+    HttpClientModule,
     ToastrModule.forRoot(),
+    TranslateModule.forRoot({
+      loader: {
+          provide: TranslateLoader,
+          useFactory: (createTranslateLoader),
+          deps: [HttpClient]
+        }
+  }),
+  NgSelectModule,
+  NgbModule,
     
 
   ],
   providers: [
     DataService,
     AuthService,
+    HttpService,
   ],
   bootstrap: [AppComponent]
 })

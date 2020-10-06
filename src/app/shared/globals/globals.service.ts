@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { environment } from '../../../environments/environment.prod';
 
 export const Servers =  {
-    apiserver:'http://localhost:3000',
+    apiserver:'http://localhost:3000/',
 
 }
 @Injectable()
