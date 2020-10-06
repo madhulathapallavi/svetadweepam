@@ -4,7 +4,61 @@
         <img src="../../assets/images/profile.png" class="profile-photo">
     </div>
     <div class="row text-center profile-form">
-        <form [formGroup]="newuserform" (ngSubmit)="onSubmit()">
+        <form #userform="ngForm" active="" (ngSubmit)="onSubmit(userform)">
+            <div class="form-group col-sm-12">
+                <label for="firstName"class="col-sm-5 col-form-label">First Name</label>
+                <div class="col-sm-7">
+                    <input type="text" class="form-control" id="firstname" placeholder="First Name" name="firstname"  #firstnameBind="ngModel" ngModel required>
+                    <small class="form-text text-danger " *ngIf="firstnameBind.errors?.required && firstnameBind.touched">Please provide your first name</small>
+                    <small class="form-text text-danger" *ngIf="firstnameIsEmpty">Please provide your first name</small>
+                </div>
+            </div>
+            <div class="form-group col-sm-12">
+                <label for="lastName"class="col-sm-5 col-form-label">Last Name</label>
+                <div class="col-sm-7">
+                    <input type="text" class="form-control" id="lastname" placeholder="Last Name" name="lastname" #lastnameBind="ngModel" ngModel required>
+                    <small class="form-text text-danger" *ngIf="lastnameBind.errors?.required && lastnameBind.touched">Please provide your last name</small>
+                    <small class="form-text text-danger" *ngIf="lastnameIsEmpty">Please provide your last name</small>
+                </div>
+            </div>
+            <div class="form-group col-sm-12">
+                <label for="email"class="col-sm-5 col-form-label">Email Id</label>
+                <div class="col-sm-7">
+                    <input type="email" class="form-control" id="emailId" placeholder="abc@gmail.com" name="email" #emailBind="ngModel" ngModel required>
+                    <small class="form-text text-danger" *ngIf="emailBind.errors?.required && emailBind.touched">Please provide your eamil</small>
+                    <small class="form-text text-danger" *ngIf="emailIsEmpty">Please provide your eamil</small>
+                </div>
+            </div>
+            <div class="form-group col-sm-12">
+                <label for="phoneNumber"class="col-sm-5 col-form-label">Phone Number</label>
+                <div class="col-sm-7">
+                    <input type="text" class="form-control" id="phonenumber" placeholder="Phone number" name="phonenumber" #phonenumberBind="ngModel" ngModel required>
+                    <small class="form-text text-danger" *ngIf="phonenumberBind.errors?.required && phonenumberBind.touched">Please provide your mobile number</small>
+                    <small class="form-text text-danger" *ngIf="phonenumberIsEmpty">Please provide your mobile number</small>
+                </div>
+            </div>
+            <div class="form-group col-sm-12">
+                <label for="password"class="col-sm-5 col-form-label">Create Password</label>
+                <div class="col-sm-7">
+                    <input type="password" class="form-control" id="password" placeholder="create password" name="password" appTogglePassword #passwordBind="ngModel" ngModel required>
+                    <small class="form-text text-danger" *ngIf="passwordBind.errors?.required && passwordBind.touched">Enter password</small>
+                    <small class="form-text text-danger" *ngIf="passwordIsEmpty">Please enter password</small>
+                </div>
+            </div>
+            <div class="form-group col-sm-12">
+                <label for="confirmPassword"class="col-sm-5 col-form-label">Confirm Password</label>
+                <div class="col-sm-7">
+                    <input type="password" class="form-control" id="cpassword" placeholder="confirm password" name="cpassword" appTogglePassword #cpasswordBind="ngModel" ngModel required (change) = "verifyPassword(userform)">
+                    <small class="form-text text-danger" *ngIf="cpasswordBind.errors?.required && cpasswordBind.touched">Confirm password</small>
+                    <small class="form-text text-danger" *ngIf="cpasswordIsEmpty">Please confirm password </small>
+                    <small class="form-text text-danger" *ngIf="showerror">Password don't match</small>
+                </div>
+            </div>
+            <div class="marginauto col-sm-12 marginbtm-form">
+                <button type="Submit"  class="btn btn-success btn-lg btn-borders" [disabled]="userform.invalid">SUBMIT</button>
+            </div>
+        </form>
+        <!-- <form [formGroup]="newuserform" (ngSubmit)="onSubmit()" method="post">
             <div class="form-group col-sm-12">
                 <label for="inputEmail3" class="col-sm-5 col-form-label">First Name</label>
                 <div class="col-sm-7">
@@ -64,7 +118,7 @@
             <div class="marginauto col-sm-12 marginbtm-form">
                 <button type="Submit"  class="btn btn-success btn-lg btn-borders" [disabled]="newuserform.invalid">SUBMIT</button>
             </div>
-        </form>
+        </form> -->
     </div>
     <div class="row">
     {{newuserform.value | json}}
