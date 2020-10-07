@@ -27,6 +27,7 @@ import { MagazineUploaderComponent } from './magazine-uploader/magazine-uploader
 
 import { NgSelectModule } from '@ng-select/ng-select';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.component';
 
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -43,6 +44,7 @@ export function createTranslateLoader(http: HttpClient) {
     SubscribeComponent,
     UsersdetailsComponent,
     MagazineUploaderComponent,
+    ForgotpasswordComponent,
    
   ],
   imports: [

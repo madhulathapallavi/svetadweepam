@@ -9,6 +9,7 @@ import { SubscribeComponent } from './subscribe/subscribe.component';
 import { UsersdetailsComponent } from './usersdetails/usersdetails.component';
 
 import {MagazineUploaderComponent} from './magazine-uploader/magazine-uploader.component';
+import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.component';
 
 
 const routes: Routes = [
@@ -21,6 +22,7 @@ const routes: Routes = [
   {path:'subscription',component:SubscribeComponent},
   {path:'Usersdetails',component:UsersdetailsComponent},
   {path: 'upload', component: MagazineUploaderComponent},
+  {path:'forgotpassword',component:ForgotpasswordComponent}
   
   
 ];
