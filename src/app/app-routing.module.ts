@@ -8,6 +8,8 @@ import { UserformComponent } from './userform/userform.component';
 import { SubscribeComponent } from './subscribe/subscribe.component';
 import { UsersdetailsComponent } from './usersdetails/usersdetails.component';
 
+import {MagazineUploaderComponent} from './magazine-uploader/magazine-uploader.component';
+
 
 const routes: Routes = [
   {path:'',component:LoginInComponent},
@@ -17,7 +19,8 @@ const routes: Routes = [
   {path:'profile',component:ProfileComponent},
   {path:'userform',component:UserformComponent},
   {path:'subscription',component:SubscribeComponent},
-  {path:'Usersdetails',component:UsersdetailsComponent}
+  {path:'Usersdetails',component:UsersdetailsComponent},
+  {path: 'upload', component: MagazineUploaderComponent},
   
   
 ];

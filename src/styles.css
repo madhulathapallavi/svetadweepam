@@ -1,4 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~@ng-select/ng-select/themes/default.theme.css";
+
 body{
     font-family: 'Open Sans', sans-serif;
     background: #f2f2fb!important;
@@ -49,3 +51,28 @@ input[type=text],input[type=email],input[type=password]{
 .invalid-feedback{
     font-size: 13px!important;
 }
+
+
+
+
+.ng-select-container{
+    background-color:#fff;
+    border-radius:0px;
+    border:1px solid #A6A9AE;
+    min-height:0px;
+    align-items:center;
+    line-height:16px;
+    margin: 5px 0px;
+    font-size: 1.2rem;
+}
+.ng-select.ng-select-single .ng-select-container{
+    height:28px;
+    border:1px solid #A6A9AE;
+    /* color: #A6A9AE; */
+    font-size: 1.2rem;
+}
+ng-select.custom > div {
+    border: 1px solid #A6A9AE!important;
+    /* outline: none; */
+    font-size: 1.2rem;
+    }
